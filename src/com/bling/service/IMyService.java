@@ -26,38 +26,38 @@ public interface IMyService {
 
     /**
      * 
-     * @param arg1
-     * @param arg0
+     * @param b
+     * @param a
      * @return
      *     returns int
      */
     @WebMethod
-    @WebResult(targetNamespace = "")
+    @WebResult(name = "sumResult", targetNamespace = "")
     @RequestWrapper(localName = "sum", targetNamespace = "http://service.bling.com/", className = "com.bling.service.Sum")
     @ResponseWrapper(localName = "sumResponse", targetNamespace = "http://service.bling.com/", className = "com.bling.service.SumResponse")
     @Action(input = "http://service.bling.com/IMyService/sumRequest", output = "http://service.bling.com/IMyService/sumResponse")
     public int sum(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        int arg1);
+        @WebParam(name = "a", targetNamespace = "")
+        int a,
+        @WebParam(name = "b", targetNamespace = "")
+        int b);
 
     /**
      * 
-     * @param arg1
-     * @param arg0
+     * @param b
+     * @param a
      * @return
      *     returns int
      */
     @WebMethod
-    @WebResult(targetNamespace = "")
+    @WebResult(name = "minusResult", targetNamespace = "")
     @RequestWrapper(localName = "minus", targetNamespace = "http://service.bling.com/", className = "com.bling.service.Minus")
     @ResponseWrapper(localName = "minusResponse", targetNamespace = "http://service.bling.com/", className = "com.bling.service.MinusResponse")
     @Action(input = "http://service.bling.com/IMyService/minusRequest", output = "http://service.bling.com/IMyService/minusResponse")
     public int minus(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        int arg1);
+        @WebParam(name = "a", targetNamespace = "")
+        int a,
+        @WebParam(name = "b", targetNamespace = "")
+        int b);
 
 }
